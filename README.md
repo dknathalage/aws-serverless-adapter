@@ -2,6 +2,21 @@
 
 This project contains a SvelteKit adapter to deploy SvelteKit to AWS using AWS-CDK.
 
+## Recent Updates (2025)
+
+This repository has been modernized with:
+- ✅ Updated AWS CDK from 2.66.0 to 2.114.1
+- ✅ Updated TypeScript from 4.9.5 to 5.3.3
+- ✅ Updated Node.js runtime from 16 to 20
+- ✅ Updated SvelteKit to latest compatible version
+- ✅ Updated all dependencies to 2025 versions
+- ✅ Added working example application in `example/` directory
+- ✅ Comprehensive deployment documentation
+
+## Quick Start
+
+See the [example/](./example/) directory for a complete working example, or follow [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step deployment instructions.
+
 ## How to use?
 
 1. Create a SvelteKit project "my-app" - `npm create svelte@latest my-app`
@@ -40,13 +55,30 @@ export interface AWSAdapterProps {
   artifactPath?: string; // Build output directory (default: build)
   autoDeploy?: boolean; // Should automatically deploy in SvelteKit build step (default: false)
   stackName?: string; // AWS-CDK CloudFormation Stackname (default: AWSAdapterStack-Default)
-  esbuildOptions?: any; // Override or extend default esbuild options. Supports `external` (default `['node:*']`), `format` (default `cjs`), `target` (default `node16`), `banner` (default `{}`).
+  esbuildOptions?: any; // Override or extend default esbuild options. Supports `external` (default `['node:*']`), `format` (default `cjs`), `target` (default `node20`), `banner` (default `{}`).
   FQDN?: string; // Full qualified domain name of CloudFront deployment (e.g. demo.example.com)
   MEMORY_SIZE?: number; // Memory size of SSR lambda in MB (default 128 MB)
   LOG_RETENTION_DAYS?: number; // Log retention in days of SSR lambda (default 7 days)
   zoneName?: string; // The name of the hosted zone in Route 53 (defaults to the TLD from the FQDN)
 }
 ```
+
+## Working Example
+
+A complete working example is available in the `example/` directory. It demonstrates:
+- SvelteKit application with SSR
+- API routes running on Lambda
+- Static asset optimization
+- AWS deployment configuration
+
+To run the example:
+```bash
+cd example
+npm install
+npm run build
+```
+
+See [example/README.md](./example/README.md) for detailed instructions.
 
 ## Example usages
 

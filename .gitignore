@@ -14,3 +14,6 @@ cdk.context.json
 
 # OSX
 .DS_Store
+
+example
+.claude

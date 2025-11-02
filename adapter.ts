@@ -71,7 +71,7 @@ export function adapter({
         banner: esbuildOptions?.banner ?? {},
         bundle: true,
         platform: 'node',
-        target: esbuildOptions?.target ?? 'node16',
+        target: esbuildOptions?.target ?? 'node20',
         treeShaking: true,
       });
 
