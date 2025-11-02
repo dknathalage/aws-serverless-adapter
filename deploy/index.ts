@@ -3,7 +3,7 @@ import { App, Tags } from 'aws-cdk-lib';
 import { AWSAdapterStack } from '../lib/adapter-stack';
 
 const app = new App();
-Tags.of(app).add('app', 'sveltekit-adapter-aws-webapp');
+Tags.of(app).add('app', 'aws-serverless-adapter-webapp');
 
 new AWSAdapterStack(app, process.env.STACKNAME!, {
   FQDN: process.env.FQDN!,

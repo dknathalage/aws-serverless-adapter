@@ -23,7 +23,7 @@ export function adapter({
   artifactPath = 'build',
   autoDeploy = false,
   cdkProjectPath = `${__dirname}/deploy/index.js`,
-  stackName = 'sveltekit-adapter-aws-webapp',
+  stackName = 'aws-serverless-adapter-webapp',
   esbuildOptions = {},
   FQDN,
   LOG_RETENTION_DAYS,

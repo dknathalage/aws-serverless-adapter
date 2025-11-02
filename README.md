@@ -22,7 +22,7 @@ See the [example/](./example/) directory for a complete working example, or foll
 1. Create a SvelteKit project "my-app" - `npm create svelte@latest my-app`
 2. `cd my-app`
 3. `npm install`
-4. `npm install -D sveltekit-adapter-aws`
+4. `npm install -D aws-serverless-adapter`
 5. edit **svelte.config.js**
 
 ## Basic setup example
@@ -30,7 +30,7 @@ See the [example/](./example/) directory for a complete working example, or foll
 **svelte.config.js**
 
 ```javascript
-import { adapter } from 'sveltekit-adapter-aws';
+import { adapter } from 'aws-serverless-adapter';
 import preprocess from 'svelte-preprocess';
 
 export default {
