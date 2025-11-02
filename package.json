@@ -3,12 +3,12 @@
   "description": "SvelteKit to deploy your project using AWS CDK.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MikeBild/sveltekit-adapter-aws.git"
+    "url": "git+https://github.com/dknathalage/aws-serverless-adapter.git"
   },
   "bugs": {
-    "url": "https://github.com/MikeBild/sveltekit-adapter-aws/issues"
+    "url": "https://github.com/dknathalage/aws-serverless-adapter/issues"
   },
-  "homepage": "https://github.com/MikeBild/sveltekit-adapter-aws#readme",
+  "homepage": "https://github.com/dknathalage/aws-serverless-adapter#readme",
   "license": "MIT",
   "keywords": [
     "sveltekit",
@@ -26,7 +26,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
